@@ -1,10 +1,18 @@
+// components
+import PetCard from '../../components/PetCard/PetCard'
 //css
 import styles from './PetList.module.css'
 
-const PetList = () => {
+
+const PetList = (props) => {
   return ( 
     <main className={styles.container}>
-      PetList
+      {props.pets.map(pet => (
+        <PetCard 
+          key={pet._id} 
+          pet={pet} 
+        />
+      ))}
     </main>
   )
 }
