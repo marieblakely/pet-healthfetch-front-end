@@ -46,6 +46,12 @@ function App() {
     if (user) fetchAllPets()
   }, [user])
 
+  const handleAddPet = async (petFormData) => {
+    // const newBlog <-- This is where 'create' service function will go
+    setPets([newPet, ...pets])
+    navigate('/pets')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -95,7 +101,7 @@ function App() {
           path="/pets/new" 
           element={
           <ProtectedRoute user={user}>
-            <NewPet />
+            <NewPet handleAddPet={handleAddPet} />
           </ProtectedRoute>
           }
         />

@@ -22,8 +22,7 @@ const NewPet = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    // Our service method will be passed in
-    //   as a prop and will be invoked here
+    props.handleAddPet(formData)
   }
 
   const handleChange = evt => {
