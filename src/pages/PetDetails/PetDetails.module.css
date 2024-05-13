@@ -1,0 +1,11 @@
+.container {
+  height: 600px;
+  width: 400px;
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  flex-direction: column;
+  background-color: peru;
+  margin-left: 50px;
+  border-radius: 16px;
+}
