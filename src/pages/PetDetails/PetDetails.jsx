@@ -1,13 +1,15 @@
 //npm modules\
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
 //services
 import * as petService from '../../services/petService'
 //components
 import Loading from '../Loading/Loading'
 import OwnerInfo from '../../components/OwnerInfo/OwnerInfo'
+import Icon from '../../components/Icon/Icon'
 // css
 import styles from './PetDetails.module.css'
+
 
 const PetDetails = (props) => {
   const { petId } = useParams()
@@ -29,7 +31,7 @@ const PetDetails = (props) => {
         <article>
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
-          <h5>DOB: {pet.birthdate}</h5>
+          <h5>DOB: {pet.birthDate}</h5>
           <h5>Breed: {pet.breed}</h5>
           <h5>Color: {pet.color}</h5>
           <h5>Sex: {pet.sex}</h5>
@@ -41,6 +43,16 @@ const PetDetails = (props) => {
         </article>
         <span>
           <OwnerInfo content={pet} />
+          {pet.owner._id === props.user.profile &&
+            <>
+              <NavLink to='/pets/edit' state={pet}>
+                <Icon category='Edit' />
+              </NavLink>
+              <button>
+                <Icon category='Trash' />
+              </button>
+            </>
+            }
         </span>
       </section>
     </main>

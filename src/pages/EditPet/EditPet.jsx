@@ -1,39 +1,27 @@
-//npm modules
-import { useState } from 'react'
-// css
-import styles from './NewPet.module.css'
+// npm modules
+import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
-const NewPet = (props) => {
-  const [formData, setFormData] = useState({
-    photo: '',
-    name: '',
-    phone: '',
-    address: '',
-    birthDate: new Date(),
-    breed: '',
-    color: '',
-    sex: 'Female',
-    elixir: '',
-    medicalHistory: '',
-    medications: '',
-    allergies: '',
-    vetName: '',
-  })
+//css
+import styles from './EditPet.module.css'
 
-  const handleSubmit = evt => {
-    evt.preventDefault()
-    props.handleAddPet(formData)
+const EditPet = (props) => {
+  const { state } = useLocation()
+  const [formData, setFormData] = useState(state) 
+
+  const handleChange = (evt) => {
+    setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
-  const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+  const handleSubmit = (evt) => {
+    evt.preventDefault()
+    // Update this line shortly...
   }
 
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <h1>New Pet</h1>
-
+        <h1>Edit Pet</h1>
         <label htmlFor="name-input">Name</label>
         <input
           required
@@ -162,5 +150,3 @@ const NewPet = (props) => {
     </main>
   )
 }
-
-export default NewPet
