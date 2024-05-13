@@ -1,6 +1,6 @@
 .container {
-  height: 600px;
-  width: 400px;
+  height: 700px;
+  width: 500px;
   display: flex;
   overflow: scroll;
   align-items: center;
