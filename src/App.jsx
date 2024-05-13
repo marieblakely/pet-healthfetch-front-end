@@ -47,7 +47,7 @@ function App() {
   }, [user])
 
   const handleAddPet = async (petFormData) => {
-    // const newBlog <-- This is where 'create' service function will go
+    const newPet = await petService.create(petFormData)
     setPets([newPet, ...pets])
     navigate('/pets')
   }
