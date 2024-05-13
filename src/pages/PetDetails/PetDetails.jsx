@@ -26,7 +26,7 @@ const PetDetails = (props) => {
   return (  
     <main className={styles.container}>
       <section>
-        <span>
+        <article>
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
           <h5>DOB: {pet.birthdate}</h5>
@@ -38,8 +38,10 @@ const PetDetails = (props) => {
           <h5>Medications: {pet.medications}</h5>
           <h5>Allergies: {pet.allergies}</h5>
           <h5>Vet Name: {pet.vetName}</h5>
+        </article>
+        <span>
+          <OwnerInfo content={pet} />
         </span>
-        <OwnerInfo content={pet} />
       </section>
     </main>
   )
