@@ -22,7 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: red;
+  background-color: purple;
+  border-radius: 16px;
 }
 
 .container section {

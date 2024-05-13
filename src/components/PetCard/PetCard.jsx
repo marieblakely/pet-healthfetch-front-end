@@ -14,7 +14,7 @@ const PetCard = ({ pet }) => {
         <header>
           <h1>{pet.name}</h1>
           <img src={pet.photo} alt="pet photo"/>
-          <section>
+          {/* <section>
             <span>
               <h5>{pet.phone}</h5>
               <h5>{pet.address}</h5>
@@ -28,9 +28,8 @@ const PetCard = ({ pet }) => {
               <h5>{pet.allergies}</h5>
               <h5>{pet.vetName}</h5>
             </span>
-          
-          </section>
-          <OwnerInfo content={pet} />
+            <OwnerInfo content={pet} />
+          </section> */}
         </header>
       </article>
     </NavLink>
