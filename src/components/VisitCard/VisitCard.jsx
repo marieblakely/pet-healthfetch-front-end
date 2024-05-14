@@ -20,9 +20,9 @@ const VisitCard = ({ visit, user }) => {
           } */}
         </span>
       </header>
-      <p>{visit.visitReason}</p>
-      <p>{visit.visitDate}</p>
-      <p>{visit.urgent ? 'yes' : 'no' }</p>
+      <p>Reason For Visit: {visit.visitReason}</p>
+      <p>Visit Request Date: {visit.visitDate}</p>
+      <p>Is Visit Urgent?: {visit.urgent ? 'yes' : 'no' }</p>
     </article>
   )
 }
