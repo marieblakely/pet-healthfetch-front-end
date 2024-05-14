@@ -7,6 +7,8 @@ import * as petService from '../../services/petService'
 import Loading from '../Loading/Loading'
 import OwnerInfo from '../../components/OwnerInfo/OwnerInfo'
 import Icon from '../../components/Icon/Icon'
+import NewVisit from '../../components/NewVisit/NewVisit'
+import Visits from '../../components/Visits/Visits'
 // css
 import styles from './PetDetails.module.css'
 
@@ -22,6 +24,11 @@ const PetDetails = (props) => {
     }
     fetchPet()
   }, [petId])
+
+  const handleAddVisit = async (visitFormData) => {
+    const newVisit = await petService.createVisit(petId, visitFormData)
+    setPet({ ...pet, visits: [...pet.visits, NewVisit] })
+  } 
 
   if (!pet) return <Loading />
 
@@ -54,6 +61,10 @@ const PetDetails = (props) => {
             </>
             }
         </span>
+        <div>
+          <NewVisit handleAddVisit={handleAddVisit} />
+          <Visits visits={pet.visits} user={props.user} />
+        </div>
       </section>
     </main>
   )

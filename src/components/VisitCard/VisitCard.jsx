@@ -1,7 +1,15 @@
-const VisitCard = () => {
+//components
+import OwnerInfo from "../OwnerInfo/OwnerInfo"
+
+const VisitCard = ({ visit, user }) => {
   return (
     <article>
-      <p>VisitCard</p>
+      <header>
+        <OwnerInfo content={visit} />
+      </header>
+      <p>{visit.Reason}</p>
+      <p>{visit.Date}</p>
+      <p>{visit.urgent}</p>
     </article>
   )
 }

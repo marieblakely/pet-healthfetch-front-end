@@ -1,7 +1,18 @@
-const Visits = () => {
+//components
+import VisitCard from "../VisitCard/VisitCard"
+
+
+const Visits = (props) => {
+  if (!props.visits.length) return <h4>No Visits</h4>
   return (
     <>
-      <h1>Visits</h1>
+      {props.visits.map((visit) => (
+        <VisitCard
+        key={visit._id}
+        visit={visit}
+        user={props.user}
+      />
+      ))}
     </>
   )
 }

@@ -71,10 +71,27 @@ async function deletePet(petId) {
   }
 }
 
+async function createVisit(petId, visitFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${petId}/visits`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(visitFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
   deletePet as delete,
+  createVisit,
 }
