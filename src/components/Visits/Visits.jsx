@@ -12,6 +12,7 @@ const Visits = (props) => {
         visit={visit}
         user={props.user}
         petId={props.petId}
+        handleDeleteVisit={props.handleDeleteVisit}
       />
       ))}
     </>

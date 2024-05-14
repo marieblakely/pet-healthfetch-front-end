@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 // import OwnerInfo from "../OwnerInfo/OwnerInfo"
 import Icon from "../Icon/Icon"
 
-const VisitCard = ({ visit, petId }) => {
+const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
   return (
     <article>
       <header>
@@ -15,7 +15,8 @@ const VisitCard = ({ visit, petId }) => {
               <NavLink to={`/pets/${petId}/pets/edit`} state={visit}>
                 <Icon category='Edit' />
               </NavLink>
-              <button><Icon category='Trash' /></button>
+              <button onClick={()=> handleDeleteVisit(petId, visit._id)}> <Icon category='Trash' />
+              </button>
             </>
           {/* } */}
         </span>

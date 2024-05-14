@@ -30,6 +30,11 @@ const PetDetails = (props) => {
     setPet({ ...pet, visits: [...pet.visits, newVisit] })
   } 
 
+  const handleDeleteVisit = async (petId, visitId) => {
+    await petService.deleteVisit(petId, visitId)
+    setPet({ ...pet, visits: pet.visits.filter((visit) => visit._id !== visitId) })
+  }
+
   if (!pet) return <Loading />
 
   return (  
@@ -63,7 +68,12 @@ const PetDetails = (props) => {
         </span>
         <div>
           <NewVisit handleAddVisit={handleAddVisit} />
-          <Visits visits={pet.visits} user={props.user} petId={petId} />
+          <Visits 
+          visits={pet.visits} 
+          user={props.user} 
+          petId={petId} 
+          handleDeleteVisit={handleDeleteVisit}
+          />
         </div>
       </section>
     </main>

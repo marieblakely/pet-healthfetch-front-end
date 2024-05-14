@@ -103,6 +103,20 @@ const updateVisit = async (petId, visitFormData) => {
   }
 }
 
+const deleteVisit = async (petId, visitId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${petId}/visits/${visitId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -111,4 +125,5 @@ export {
   deletePet as delete,
   createVisit,
   updateVisit,
+  deleteVisit,
 }
