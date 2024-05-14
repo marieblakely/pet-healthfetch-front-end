@@ -1,0 +1,18 @@
+input,
+textarea,
+select,
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 40%;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  background: #f4f9fa;
+  margin: 7px 0 14px 0;
+  border: 1.5px solid #dfe6e8;
+  box-shadow: inset 5px 5px 6px #e0e5e6, inset -5px -5px 6px #f8fdfe;
+}
