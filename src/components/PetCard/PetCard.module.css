@@ -6,17 +6,18 @@ body {
   margin-top: 100px;
   margin: 5px;
   width: 320px;
+  height: 300px;
   display: flex;
   align-items: center;
   border-radius: 20px;
   flex-direction: column;
   justify-content: flex-end;
   border: 1.5px solid rgba(255, 255, 255, .3);
-  box-shadow: 10px 10px 20px #15b0dc, -10px -10px 20px #19d7ff;
+  box-shadow: 10px 10px 20px #592a80, -10px -10px 20px #592a80;
   background:
   linear-gradient(0deg,
-  rgba(70, 215, 255, .65) 0%,
-  rgba(70, 215, 255, .85) 100%);
+  rgba(254, 254, 254, .65) 0%,
+  rgba(254, 254, 254, .85) 100%);
 }
 
 /* .container header {
