@@ -2,11 +2,16 @@
 import { useState } from 'react'
 // css
 import styles from './NewVisit.module.css'
-//components
-import Icon from '../Icon/Icon'
+// //components
+// import Icon from '../Icon/Icon'
 
 const NewVisit = (props) => {
-  const [formData, setFormData] = useState({ text: ''})
+  const [formData, setFormData] = useState({
+    photo: '',
+    visitReason: '',
+    visitDate: '',
+    urgent: 'no',
+  })
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
@@ -15,7 +20,12 @@ const NewVisit = (props) => {
   const handleSubmit = (evt) => {
     evt.preventDefault()
     props.handleAddVisit(formData)
-    setFormData({ text: '' })
+    setFormData({
+      photo: '',
+      visitReason: '',
+      visitDate: '',
+      urgent: 'no',
+    })
   }
 
   return (

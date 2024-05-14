@@ -11,6 +11,7 @@ const Visits = (props) => {
         key={visit._id}
         visit={visit}
         user={props.user}
+        petId={props.petId}
       />
       ))}
     </>

@@ -1,22 +1,24 @@
 .container {
-  height: 700px;
-  width: 700px;
+  /* height: 700px;
+  width: 700px; */
   display: flex;
   overflow: scroll;
   align-items: center;
   flex-direction: column;
-  background-color: peru;
+  /* background-color: peru; */
   margin-left: 50px;
   border-radius: 16px;
 }
 
 
-.container article, .container > section {
+.container article {
   width: 100%;
   padding: 21px;
   display: flex;
   max-width: 700px;
   flex-direction: column;
+  background-color: aqua;
+  color: black;
 }
 
 
@@ -50,6 +52,7 @@
   min-height: 140px;
   border-radius: 5px;
   margin: 4px 0px 14px;
+  color: black;
 }
 
 .container > section h1 {
@@ -58,6 +61,7 @@
 
 .container > section article p {
   text-indent: 0px;
+  color: black;
 }
 
 .container button {

@@ -27,7 +27,7 @@ const PetDetails = (props) => {
 
   const handleAddVisit = async (visitFormData) => {
     const newVisit = await petService.createVisit(petId, visitFormData)
-    setPet({ ...pet, visits: [...pet.visits, NewVisit] })
+    setPet({ ...pet, visits: [...pet.visits, newVisit] })
   } 
 
   if (!pet) return <Loading />
@@ -63,7 +63,7 @@ const PetDetails = (props) => {
         </span>
         <div>
           <NewVisit handleAddVisit={handleAddVisit} />
-          <Visits visits={pet.visits} user={props.user} />
+          <Visits visits={pet.visits} user={props.user} petId={petId} />
         </div>
       </section>
     </main>
