@@ -39,7 +39,7 @@ const PetDetails = (props) => {
 
   return (  
     <main className={styles.container}>
-      <section>
+      {/* <section> */}
         <article>
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
@@ -75,7 +75,7 @@ const PetDetails = (props) => {
           handleDeleteVisit={handleDeleteVisit}
           />
         </div>
-      </section>
+      {/* </section> */}
     </main>
   )
 }
