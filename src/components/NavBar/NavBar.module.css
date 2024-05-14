@@ -7,8 +7,9 @@
   position: fixed; 
   padding: 14px 21px;
   align-items: center;
-  background: black;
+  background: #f78935;
   border-bottom: 1px solid rgb(200, 200, 200);
+  text-decoration: none;
 }
 
 .container img {
