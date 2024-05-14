@@ -87,6 +87,22 @@ async function createVisit(petId, visitFormData) {
   }
 }
 
+const updateVisit = async (petId, visitFormData) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${petId}/visits`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(visitFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -94,4 +110,5 @@ export {
   update,
   deletePet as delete,
   createVisit,
+  updateVisit,
 }

@@ -1,23 +1,23 @@
+//npm modules
+import { NavLink } from "react-router-dom"
 //components
-// import { Link } from "react-router-dom"
-import OwnerInfo from "../OwnerInfo/OwnerInfo"
+// import OwnerInfo from "../OwnerInfo/OwnerInfo"
+import Icon from "../Icon/Icon"
 
-const VisitCard = ({ visit, user }) => {
+const VisitCard = ({ visit, petId }) => {
   return (
     <article>
       <header>
-      <span>
+        <span>
           {/* <OwnerInfo content={visit} />
-          {visit.owner._id === user.profile &&
-            <> */}
-              {/* <Link to={`/pets/${petId}/visits/${visit._id}`} state={visit}>
-                <Icon category='Edit'/>
-              </Link> */}
-							{/* <button onClick={()=> handleDeleteVisit(petId, comment._id)}>
-                <Icon category='Trash'/>
-              </button> */}
-            {/* </>
-          } */}
+          {visit.owner._id === user.profile && */}
+            <>
+              <NavLink to={`/pets/${petId}/pets/edit`} state={visit}>
+                <Icon category='Edit' />
+              </NavLink>
+              <button><Icon category='Trash' /></button>
+            </>
+          {/* } */}
         </span>
       </header>
       <p>Reason For Visit: {visit.visitReason}</p>

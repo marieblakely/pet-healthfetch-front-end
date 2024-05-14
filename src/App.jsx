@@ -127,14 +127,15 @@ function App() {
           </ProtectedRoute>
           }
         />
+        <Route 
+          path="/pets/:petId/pets/edit" 
+          element={
+          <ProtectedRoute user={user}>
+            <EditVisit />
+          </ProtectedRoute>
+          } 
+        />
       </Routes>
-      <Route 
-        path="/pets/:petId/pets/edit" 
-        element={
-        <ProtectedRoute user={user}>
-          <EditVisit />
-        </ProtectedRoute>
-      } />
     </>
   )
 }
