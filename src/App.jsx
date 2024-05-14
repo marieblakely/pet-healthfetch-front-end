@@ -59,6 +59,12 @@ function App() {
     navigate('/pets')
   }
 
+  const handleDeletePet = async (petId) => {
+    const deletedPet = await petService.delete(petId)
+    setPets(pets.filter(pet => pet._id !== deletedPet._id))
+    navigate('/pets')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -100,7 +106,7 @@ function App() {
           path="/pets/:petId"
           element={
           <ProtectedRoute user={user}>
-            <PetDetails user={user} />
+            <PetDetails user={user} handleDeletePet={handleDeletePet} />
           </ProtectedRoute>
           }
         />

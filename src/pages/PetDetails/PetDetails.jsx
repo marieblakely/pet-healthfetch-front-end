@@ -48,7 +48,7 @@ const PetDetails = (props) => {
               <NavLink to='/pets/edit' state={pet}>
                 <Icon category='Edit' />
               </NavLink>
-              <button>
+              <button onClick={() => props.handleDeletePet(petId)}>
                 <Icon category='Trash' />
               </button>
             </>

@@ -57,15 +57,24 @@ async function update(petFormData) {
   }
 }
 
+async function deletePet(petId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${petId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
-}
-
-export { 
-  index, 
-  show,
-  create,
+  deletePet as delete,
 }
