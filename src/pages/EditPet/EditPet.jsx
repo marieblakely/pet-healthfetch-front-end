@@ -15,7 +15,7 @@ const EditPet = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    // Update this line shortly...
+    props.handleUpdatePet(formData)
   }
 
   return (
@@ -150,3 +150,7 @@ const EditPet = (props) => {
     </main>
   )
 }
+
+
+
+export default EditPet

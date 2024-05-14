@@ -53,6 +53,12 @@ function App() {
     navigate('/pets')
   }
 
+  const handleUpdatePet = async (petFormData) => {
+    const updatedPet = await petService.update(petFormData)
+    setPets(pets.map((pet) => updatedPet._id === pet._id ? updatedPet : pet))
+    navigate('/pets')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -110,7 +116,7 @@ function App() {
           path="/pets/edit" 
           element={
           <ProtectedRoute user={user}>
-            <EditPet />
+            <EditPet handleUpdatePet={handleUpdatePet} />
           </ProtectedRoute>
           }
         />

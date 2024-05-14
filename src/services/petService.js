@@ -41,6 +41,29 @@ async function create(petFormData) {
   }
 }
 
+async function update(petFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${petFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(petFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export {
+  index,
+  show,
+  create,
+  update,
+}
+
 export { 
   index, 
   show,
