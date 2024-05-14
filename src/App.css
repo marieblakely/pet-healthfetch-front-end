@@ -6,22 +6,20 @@
 
 body {
   box-sizing: border-box;
-
-  margin: 0;
   min-height: calc(100vh - 80px);
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Freeman", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 20px;
-
   color: black;
   background-color: white;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
 
 a,
 a:visited {

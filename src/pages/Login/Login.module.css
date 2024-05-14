@@ -1,8 +1,18 @@
+body {
+  min-height: calc(100vh - 80px);
+}
+
 input {
   margin-left: 16px;
   padding: 4px 8px;
   font-size: 16px;
   width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
 }
 
 input[type="file"] {
@@ -13,6 +23,7 @@ input[type="file"] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 80px;
 }
 
 .message {
@@ -28,6 +39,15 @@ input[type="file"] {
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  background: rgb(255, 255, 255, 0.3);
+  padding: 3em;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 
 .label {
@@ -40,6 +60,8 @@ input[type="file"] {
 
 .button {
   margin-left: 16px;
+  border-radius: 8px;
+  padding: 8px;
 }
 
 .form > label:last-of-type {
