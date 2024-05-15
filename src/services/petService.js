@@ -117,6 +117,26 @@ const deleteVisit = async (petId, visitId) => {
   }
 }
 
+async function addPhoto(photoData, petId) {
+  try {
+    console.log(photoData, petId)
+    const photoFormData = new FormData()
+    photoFormData.append('photo', photoData)
+    const res = await fetch(`${BASE_URL}/${petId}/add-photo`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+      body: photoFormData,
+    })
+    return await res.json()
+  } catch (err) {
+    throw new Error(err)
+  }
+}
+
+
+
 export {
   index,
   show,
@@ -126,4 +146,5 @@ export {
   createVisit,
   updateVisit,
   deleteVisit,
+  addPhoto,
 }
