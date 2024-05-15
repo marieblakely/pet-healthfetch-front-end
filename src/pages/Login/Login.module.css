@@ -2,7 +2,7 @@ body {
   min-height: calc(100vh - 80px);
 }
 
-input {
+.container > input {
   margin-left: 16px;
   padding: 4px 8px;
   font-size: 16px;
@@ -34,13 +34,13 @@ input[type="file"] {
   font-weight: bold;
 }
 
-.form {
+.container > form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   background: rgb(255, 255, 255, 0.3);
   padding: 3em;
   border-radius: 20px;
@@ -49,7 +49,7 @@ input[type="file"] {
   backdrop-filter: blur(10px);
   box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
   text-align: center;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 .label {

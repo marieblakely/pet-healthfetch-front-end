@@ -10,7 +10,7 @@
 }
 
 
-.container article {
+.container > article {
   width: 400px;
   padding: 21px;
   display: flex;
@@ -102,10 +102,10 @@
   background-color: rgb(190, 190, 190);
 }
 
-/* section {
+.container > section {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   border: 2px solid black;
-} */
+}

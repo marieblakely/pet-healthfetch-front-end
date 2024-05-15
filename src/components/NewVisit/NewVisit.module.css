@@ -4,7 +4,7 @@
   height: 400px;
 }
 
-  .container submit {
+  .container > button {
   display: flex;
   border-radius: 8px;
   background: red;
