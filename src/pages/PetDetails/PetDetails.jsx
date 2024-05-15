@@ -39,8 +39,9 @@ const PetDetails = (props) => {
 
   return (  
     <main className={styles.container}>
+      <article>
         <h1>Pet Information:</h1>
-        <article>
+        <OwnerInfo content={pet} />
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
           <h5>DOB: {new Date(pet.birthDate).toLocaleDateString()}</h5>
@@ -52,31 +53,30 @@ const PetDetails = (props) => {
           <h5>Medications: {pet.medications}</h5>
           <h5>Allergies: {pet.allergies}</h5>
           <h5>Vet Name: {pet.vetName}</h5>
-          {pet.owner._id === props.user.profile &&
-            <>
-              <NavLink to='/pets/edit' state={pet}>
-                <Icon category='Edit' />
-              </NavLink>
-              <button onClick={() => props.handleDeletePet(petId)}>
-                <Icon category='Trash' />
-              </button>
-            </>
-            }
+          <span>
+            {pet.owner._id === props.user.profile &&
+              <>
+                <NavLink to='/pets/edit' state={pet}>
+                  <Icon category='Edit' />
+                </NavLink>
+                <button onClick={() => props.handleDeletePet(petId)}>
+                  <Icon category='Trash' />
+                </button>
+              </>
+              }
+          </span>
         </article>
-        <span>
-          <OwnerInfo content={pet} />
-        </span>
         <section>
           <NewVisit handleAddVisit={handleAddVisit} />
         </section>
-          <>
+        <>
           <Visits 
           visits={pet.visits} 
           user={props.user} 
           petId={petId} 
           handleDeleteVisit={handleDeleteVisit}
           />
-          </>
+        </>
     </main>
   )
 }

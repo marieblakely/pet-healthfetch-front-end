@@ -7,7 +7,7 @@ import styles from './VisitCard.module.css'
 
 const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
   return (
-    <article>
+    <article className={styles.container}>
       <header>
         <span>
             <>
