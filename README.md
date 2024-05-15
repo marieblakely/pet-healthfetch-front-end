@@ -1,16 +1,16 @@
 
 
-![app screenshot](public/assets/images/screenshot.png)
+![app screenshot](src/assets/images/app.png)
 ![app screenshot](public/assets/images/app.png)
-# The Travel Journal
+# Pet HealthFetch
 
 
 
 
 
-## Explore The Travel Journal here:
+## Pet HealthFetch:
 
-### [The Travel Journal](https://the-travel-journal.fly.dev)
+### [Pet HealthFetch](https://pet-healthfetch.netlify.app/)
 
 
 ### Description:
@@ -20,7 +20,7 @@
 
 ### Planning Materials:
 
-[Planning Materials](https://trello.com/invite/b/NjFljpz1/ATTI2704ae0e4df224e63a8b977b7d7751c87BCCE9BC/the-travel-journal)
+[Planning Materials](https://trello.com/b/8Uei3orD/mern-stack-pet-health-app)
 
 
 Technologies Used:

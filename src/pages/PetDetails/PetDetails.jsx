@@ -39,6 +39,7 @@ const PetDetails = (props) => {
 
   return (  
     <main className={styles.container}>
+        <h1>Pet Information:</h1>
         <article>
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
@@ -67,13 +68,15 @@ const PetDetails = (props) => {
         </span>
         <section>
           <NewVisit handleAddVisit={handleAddVisit} />
+        </section>
+          <>
           <Visits 
           visits={pet.visits} 
           user={props.user} 
           petId={petId} 
           handleDeleteVisit={handleDeleteVisit}
           />
-        </section>
+          </>
     </main>
   )
 }
