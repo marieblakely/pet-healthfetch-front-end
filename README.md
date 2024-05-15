@@ -32,12 +32,13 @@ Technologies Used:
 * GitHub
 * Trello
 * Whimsical
+* Google Slides
 * Fly.io
+* Netlify
+* Postman
 * MongoDB Compass
 * Node
-* Google OAuth
-* Passport.js
-* Express
+* React
 
 
 
