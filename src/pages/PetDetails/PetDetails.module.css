@@ -1,8 +1,8 @@
 .container {
   display: flex;
   overflow: scroll;
-  align-items: last baseline;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   margin-left: 50px;
   margin-right: 50px;
