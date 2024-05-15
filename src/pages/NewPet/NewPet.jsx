@@ -33,6 +33,16 @@ const NewPet = (props) => {
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
         <h1>New Pet</h1>
+        <label htmlFor="photo-input">Photo</label>
+        <input
+          required
+          type="text" 
+          name="photo"
+          id="photo-input"
+          placeholder="Photo"
+          value={formData.photo}
+          onChange={handleChange}
+        />
         <label htmlFor="name-input">Name</label>
         <input
           required

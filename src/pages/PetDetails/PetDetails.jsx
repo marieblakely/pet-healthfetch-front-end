@@ -39,11 +39,10 @@ const PetDetails = (props) => {
 
   return (  
     <main className={styles.container}>
-      {/* <section> */}
         <article>
           <h5>Phone Number: {pet.phone}</h5>
           <h5>Address: {pet.address}</h5>
-          <h5>DOB: {pet.birthDate}</h5>
+          <h5>DOB: {new Date(pet.birthDate).toLocaleDateString()}</h5>
           <h5>Breed: {pet.breed}</h5>
           <h5>Color: {pet.color}</h5>
           <h5>Sex: {pet.sex}</h5>
@@ -66,7 +65,7 @@ const PetDetails = (props) => {
         <span>
           <OwnerInfo content={pet} />
         </span>
-        <>
+        <section>
           <NewVisit handleAddVisit={handleAddVisit} />
           <Visits 
           visits={pet.visits} 
@@ -74,8 +73,7 @@ const PetDetails = (props) => {
           petId={petId} 
           handleDeleteVisit={handleDeleteVisit}
           />
-        </>
-      {/* </section> */}
+        </section>
     </main>
   )
 }

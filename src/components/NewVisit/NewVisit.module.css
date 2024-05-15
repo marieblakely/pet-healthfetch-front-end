@@ -1,8 +1,11 @@
 .container {
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
-.submit-btn {
+  .container submit {
+  display: flex;
   border-radius: 8px;
+  background: red;
 }

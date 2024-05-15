@@ -10,11 +10,17 @@ const NewVisit = (props) => {
     photo: '',
     visitReason: '',
     visitDate: '',
-    urgent: 'no',
+    urgent: false,
   })
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
+  }
+
+  const handleCheckBox = (evt) => {
+    console.log(evt.target.value)
+    const checkboxVal = formData.urgent
+    setFormData({ ...formData, urgent: !checkboxVal })
   }
 
   const handleSubmit = (evt) => {
@@ -24,7 +30,7 @@ const NewVisit = (props) => {
       photo: '',
       visitReason: '',
       visitDate: '',
-      urgent: 'no',
+      urgent: false,
     })
   }
 
@@ -57,11 +63,11 @@ const NewVisit = (props) => {
           type="checkbox"
           name="urgent"
           id="urgent checkbox"
-          value={formData.urgent}
+          checked={formData.urgent ? 'on' : ''}
           // placeholder="Check Yes or No"
-          onChange={handleChange}
+          onChange={handleCheckBox}
         />
-      <button className='submit-btn' type="submit">Submit</button>
+      <button type="submit">Submit</button>
     </form>
   )
 }

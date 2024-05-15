@@ -7,7 +7,12 @@ import styles from './EditPet.module.css'
 
 const EditPet = (props) => {
   const { state } = useLocation()
-  const [formData, setFormData] = useState(state) 
+  const formatDate = (newDate) => {
+    const date = new Date(newDate)
+    return `${date.getUTCFullYear()}-${(date.getUTCMonth() + 1).toString().padStart(2, "0")}-${date.getUTCDate().toString().padStart(2, "0")}`
+  }
+  const [formData, setFormData] = useState({...state, birthDate: formatDate(state.birthDate)}) 
+
 
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })

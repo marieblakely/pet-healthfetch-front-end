@@ -1,6 +1,9 @@
 //npm modules
 import { NavLink } from "react-router-dom"
 import Icon from "../Icon/Icon"
+// css
+import styles from './VisitCard.module.css'
+
 
 const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
   return (
@@ -17,7 +20,7 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
         </span>
       </header>
       <p>Reason For Visit: {visit.visitReason}</p>
-      <p>Visit Request Date: {visit.visitDate}</p>
+      <p>Visit Request Date: {new Date(visit.visitDate).toLocaleDateString()}</p>
       <p>Is Visit Urgent?: {visit.urgent ? 'yes' : 'no' }</p>
     </article>
   )
