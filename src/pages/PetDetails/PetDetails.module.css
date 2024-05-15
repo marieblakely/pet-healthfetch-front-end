@@ -2,6 +2,7 @@
   display: flex;
   overflow: scroll;
   align-items: last baseline;
+  justify-content: flex-end;
   flex-direction: column;
   margin-left: 50px;
   margin-right: 50px;
@@ -10,26 +11,31 @@
 
 
 .container article {
-  /* width: 100%; */
+  width: 400px;
   padding: 21px;
   display: flex;
-  max-width: 700px;
   flex-direction: column;
-  background-color: aqua;
+  border-radius: 16px;
+  background: hsla(16, 100%, 76%, 1);
+  background: linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(16, 100%, 76%, 1) 0%, hsla(49, 100%, 81%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFA585", endColorstr="#FFEDA0", GradientType=1 );
   color: black;
 }
 
 
-span {
+
+/* span {
   width: 100%;
   display: flex;
   align-items: start;
 	margin-top: 10px;
   align-items: center;
   background-color: bisque;
-}
+} */
 
-.container span button, .container span a {
+.container button {
   margin: 0;
   width: 20%;
   padding: 5px;
@@ -39,11 +45,17 @@ span {
   margin-left: 7px;
   border-radius: 5px;
   text-align: center;
-  /* border: 1px solid var(--border); */
+  cursor: pointer;
 }
 
-.container span button, .container span a  {
-  cursor: pointer;
+.container button {
+  width: 2px;
+  height: 2px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
 }
 
 /* .container > section article {
@@ -64,15 +76,6 @@ span {
   color: black;
 } */
 
-.container button {
-  width: 2px;
-  height: 2px;
-  display: flex;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border);
-}
 
 .container img {
   width: 32px;
@@ -98,10 +101,10 @@ span {
   background-color: rgb(190, 190, 190);
 }
 
-div {
+/* div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   border: 2px solid black;
-}
+} */

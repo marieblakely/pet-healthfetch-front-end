@@ -1,7 +1,5 @@
 //npm modules
 import { NavLink } from "react-router-dom"
-//components
-// import OwnerInfo from "../OwnerInfo/OwnerInfo"
 import Icon from "../Icon/Icon"
 
 const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
@@ -9,8 +7,6 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
     <article>
       <header>
         <span>
-          {/* <OwnerInfo content={visit} />
-          {visit.owner._id === user.profile && */}
             <>
               <NavLink to={`/pets/${petId}/pets/edit`} state={visit}>
                 <Icon category='Edit' />
@@ -18,7 +14,6 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
               <button onClick={()=> handleDeleteVisit(petId, visit._id)}> <Icon category='Trash' />
               </button>
             </>
-          {/* } */}
         </span>
       </header>
       <p>Reason For Visit: {visit.visitReason}</p>

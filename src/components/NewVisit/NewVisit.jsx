@@ -61,7 +61,7 @@ const NewVisit = (props) => {
           // placeholder="Check Yes or No"
           onChange={handleChange}
         />
-      <button type="submit">Submit</button>
+      <button className='submit-btn' type="submit">Submit</button>
     </form>
   )
 }

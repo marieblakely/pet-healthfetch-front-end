@@ -52,9 +52,6 @@ const PetDetails = (props) => {
           <h5>Medications: {pet.medications}</h5>
           <h5>Allergies: {pet.allergies}</h5>
           <h5>Vet Name: {pet.vetName}</h5>
-        </article>
-        <span>
-          <OwnerInfo content={pet} />
           {pet.owner._id === props.user.profile &&
             <>
               <NavLink to='/pets/edit' state={pet}>
@@ -65,8 +62,11 @@ const PetDetails = (props) => {
               </button>
             </>
             }
+        </article>
+        <span>
+          <OwnerInfo content={pet} />
         </span>
-        <div>
+        <>
           <NewVisit handleAddVisit={handleAddVisit} />
           <Visits 
           visits={pet.visits} 
@@ -74,7 +74,7 @@ const PetDetails = (props) => {
           petId={petId} 
           handleDeleteVisit={handleDeleteVisit}
           />
-        </div>
+        </>
       {/* </section> */}
     </main>
   )

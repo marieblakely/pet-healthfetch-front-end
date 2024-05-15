@@ -33,7 +33,6 @@ const NewPet = (props) => {
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
         <h1>New Pet</h1>
-
         <label htmlFor="name-input">Name</label>
         <input
           required
@@ -44,7 +43,7 @@ const NewPet = (props) => {
           value={formData.name}
           onChange={handleChange}
         />
-        <label htmlFor="photo-input">Phone</label>
+        <label htmlFor="phone-input">Phone</label>
 				<input
           required
           type="text"
