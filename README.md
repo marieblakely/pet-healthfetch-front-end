@@ -15,7 +15,7 @@
 
 ### Description:
 
-##### Through The Travel Journal you are able to create a post to document the locations you visit and what you enjoyed about your time there. You can upload a photo as well. Users when logged in, are able to comment on your post to share their experiences of that location. You can add as many locations as you like and comment on other users posts as well. 
+##### Pet HealthFetch is the best choice for your pets health care needs. With this app you can effortlessly create a profile for your pet, and request a new visit right from the app. The app allows users to keep track of their vet visit history and features a photo upload option in the appointment form. 
 
 
 ### Planning Materials:
