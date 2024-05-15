@@ -52,7 +52,7 @@ Attributes:
 
 
 Icebox Items:
-* AAU I want to be able to add a site or restaurant I visited while at the location I traveled to.
+* AAU I would like to be able to communicate with my vet in the app.
 
 
 
