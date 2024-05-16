@@ -97,10 +97,10 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
       }
       <div className={styles.photoContainer}>
         {pet?.photos.map((photo, idx) =>
-          <div key={photo} className="photo-card">
+          <div key={photo} className={styles.photoCard}>
             <img className="album-photo" src={photo} alt="A photo of this pet" />
-            {pet.owner === user.profile &&
-              <button onClick={() => handleClick(idx)} className={styles.deleteBtn}>X</button>
+            {pet.owner._id === user.profile &&
+              <button onClick={() => handleClick(idx)} className={styles.deleteBtn}>🗑</button>
             }
           </div>
         )}

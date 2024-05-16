@@ -11,6 +11,7 @@ const PetList = (props) => {
         <PetCard 
           key={pet._id} 
           pet={pet} 
+          user={props.user}
         />
       ))}
     </main>

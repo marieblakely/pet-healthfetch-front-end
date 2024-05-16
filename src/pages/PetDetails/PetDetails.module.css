@@ -8,8 +8,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  margin-left: 10px;
-  margin-right: 50px;
+  /* margin-left: 10px; */
+  margin-right: 0px;
   border-radius: 16px;
 }
 
@@ -61,8 +61,6 @@ body {
   margin-left: 7px;
   width: 2px;
   height: 2px;
-  /* display: flex;
-  flex-direction: row; */
   border-radius: 50%;
   align-items: center;
   justify-content: center;
