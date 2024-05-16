@@ -33,6 +33,10 @@
   text-align: right;
 }
 
+.logo {
+  margin-right: auto;
+}
+
 @media only screen and (max-width: 414px) {
   .container ul {
     padding-left: 0px;

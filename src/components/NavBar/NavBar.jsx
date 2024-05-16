@@ -1,5 +1,7 @@
 // npm modules
 import { NavLink } from 'react-router-dom'
+//assets
+import logo from '../../assets/branding/logo.png'
 //css
 import styles from './NavBar.module.css'
 
@@ -8,6 +10,7 @@ import styles from './NavBar.module.css'
 const NavBar = ({ user, handleLogout }) => {
   return (
     <nav className={styles.container}>
+        <NavLink className='logo' to='/'><img src={logo} alt="A cute pet" /></NavLink>
       {user ?
         <ul>
           <li>Welcome, {user.name}</li>
