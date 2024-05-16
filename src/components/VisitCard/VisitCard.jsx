@@ -8,7 +8,6 @@ import styles from './VisitCard.module.css'
 const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
   return (
     <article className={styles.container}>
-      <header>
       <h1>Visit Info</h1>
         <p>Reason For Visit: {visit.visitReason}</p>
         <p>Visit Request Date: {new Date(visit.visitDate).toLocaleString()}</p>
@@ -22,7 +21,6 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
             </button>
           </>
         </span>
-      </header>
     </article>
   )
 }

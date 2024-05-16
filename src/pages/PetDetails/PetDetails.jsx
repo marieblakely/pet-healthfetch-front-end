@@ -66,17 +66,17 @@ const PetDetails = (props) => {
               }
           </span>
         </article>
-        <section>
+        <section className={styles.newVisit} >
           <NewVisit handleAddVisit={handleAddVisit} />
         </section>
-        <>
+        <p className={styles.visits}>
           <Visits 
           visits={pet.visits} 
           user={props.user} 
           petId={petId} 
           handleDeleteVisit={handleDeleteVisit}
           />
-        </>
+          </p>
     </main>
   )
 }

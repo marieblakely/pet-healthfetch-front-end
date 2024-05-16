@@ -2,6 +2,8 @@
 import { useState, useRef, useEffect } from "react"
 
 import { useParams } from "react-router-dom"
+//css
+import styles from './PhotoAlbum.module.css'
 
 
 const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => {
@@ -72,11 +74,11 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
 
 
   return (
-    <main className="album">
+    <main className={styles.container}>
       <h1>Photo Album</h1>
       <p>{message}</p>
       {pet?.owner._id === user.profile &&
-        <form className="album-form" onSubmit={handleSubmit}>
+        <form className={styles.albumForm} onSubmit={handleSubmit}>
           <input 
             type="file" 
             name="photo"
@@ -93,7 +95,7 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
           </button>
         </form>
       }
-      <div className="photo-container">
+      <div className={styles.photoContainer}>
         {pet?.photos.map((photo, idx) =>
           <div key={photo} className="photo-card">
             <img className="album-photo" src={photo} alt="A photo of this pet" />
