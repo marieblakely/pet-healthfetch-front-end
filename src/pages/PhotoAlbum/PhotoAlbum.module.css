@@ -42,6 +42,10 @@
   color: black;
 }
 
+.deleteBtn {
+  background-color: red;
+}
+
 input[type="file"]::file-selector-button {
   color: black;
   height: 35px;

@@ -100,7 +100,7 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
           <div key={photo} className="photo-card">
             <img className="album-photo" src={photo} alt="A photo of this pet" />
             {pet.owner === user.profile &&
-              <button onClick={() => handleClick(idx)} className="delete-btn">X</button>
+              <button onClick={() => handleClick(idx)} className={styles.deleteBtn}>X</button>
             }
           </div>
         )}
