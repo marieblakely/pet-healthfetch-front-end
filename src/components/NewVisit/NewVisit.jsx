@@ -59,7 +59,6 @@ const NewVisit = (props) => {
         />
         <label htmlFor="urgent-input">Is This Request Urgent?</label>
 				<input
-          required
           type="checkbox"
           name="urgent"
           id="urgent checkbox"

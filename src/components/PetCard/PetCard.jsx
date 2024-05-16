@@ -11,7 +11,7 @@ import styles from './PetCard.module.css'
 const PetCard = ({ pet }) => {
   return (  
     <>
-    <li>
+    <section>
     {/* {pet.photos.length ?
       <ImgCarousel photos={pet.photos} /> 
     :
@@ -20,17 +20,15 @@ const PetCard = ({ pet }) => {
    */}
     <NavLink to={`/pets/${pet._id}`}>
       <article className={styles.container}>
-        <header>
-          <h1>{pet.name.toUpperCase()}</h1>
-        </header>
-      </article>
-    </NavLink>
+        <h1>{pet.name.toUpperCase()}</h1>
     <NavLink to={`/pets/${pet._id}/album`}>
       <button className="camera-btn">
         🖼️
       </button>
     </NavLink>
-    </li>
+      </article>
+    </NavLink>
+    </section>
   </>
   )
 }
