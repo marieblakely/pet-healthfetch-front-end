@@ -9,19 +9,20 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
   return (
     <article className={styles.container}>
       <header>
+      <h1>Visit Info</h1>
+        <p>Reason For Visit: {visit.visitReason}</p>
+        <p>Visit Request Date: {new Date(visit.visitDate).toLocaleTimeString()}</p>
+        <p>Is Visit Urgent?: {visit.urgent ? 'yes' : 'no' }</p>
         <span>
-            <>
-              <NavLink to={`/pets/${petId}/pets/edit`} state={visit}>
-                <Icon category='Edit' />
-              </NavLink>
-              <button onClick={()=> handleDeleteVisit(petId, visit._id)}> <Icon category='Trash' />
-              </button>
-            </>
+          <>
+            <NavLink to={`/pets/${petId}/pets/edit`} state={visit}>
+              <Icon category='Edit' className={styles.edit} />
+            </NavLink>
+            <button className={styles.trash} onClick={()=> handleDeleteVisit(petId, visit._id)}> <Icon category='Trash' />
+            </button>
+          </>
         </span>
       </header>
-      <p>Reason For Visit: {visit.visitReason}</p>
-      <p>Visit Request Date: {new Date(visit.visitDate).toLocaleTimeString()}</p>
-      <p>Is Visit Urgent?: {visit.urgent ? 'yes' : 'no' }</p>
     </article>
   )
 }

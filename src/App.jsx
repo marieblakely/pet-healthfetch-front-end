@@ -154,7 +154,7 @@ function App() {
                 user={user} 
                 getPetById={getPetById} 
                 handleAddPhoto={handleAddPhoto}
-            />
+              />
             </ProtectedRoute>
           } 
         />

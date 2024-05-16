@@ -57,9 +57,9 @@ const PetDetails = (props) => {
             {pet.owner._id === props.user.profile &&
               <>
                 <NavLink to='/pets/edit' state={pet}>
-                  <Icon category='Edit' />
+                  <Icon category='Edit' className={styles.editBtn} />
                 </NavLink>
-                <button onClick={() => props.handleDeletePet(petId)}>
+                <button className={styles.trashBtn} onClick={() => props.handleDeletePet(petId)}>
                   <Icon category='Trash' />
                 </button>
               </>

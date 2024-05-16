@@ -33,7 +33,9 @@
   background-color: bisque;
 }
 
-.container > button {
+.editBtn {
+  display: flex;
+  flex-direction: row;
   margin: 0;
   width: 20%;
   padding: 5px;
@@ -46,13 +48,17 @@
   cursor: pointer;
 }
 
-.container > button {
+.trashBtn {
+  margin: 0;
+  margin-left: 7px;
   width: 2px;
   height: 2px;
   display: flex;
+  flex-direction: row;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   border: 1px solid var(--border);
 }
 
