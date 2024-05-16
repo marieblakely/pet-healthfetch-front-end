@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // css
-import './ImgCarousel.css'
+import './ImgCarousel.module.css'
 
 const ImgCarousel = ({ photos }) => {
   const [imgIdx, setImgIdx] = useState(0)

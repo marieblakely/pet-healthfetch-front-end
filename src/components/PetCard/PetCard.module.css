@@ -35,3 +35,8 @@ body {
   margin-bottom: 8px;
   background-color: blue;
 }
+
+img, .carousel-photo {
+  width: 185px;
+  margin-bottom: 14px;
+}

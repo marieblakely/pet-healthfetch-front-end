@@ -84,5 +84,21 @@ input[type="file"]::file-selector-button {
   background: white;
 }
 
+.album-photo {
+  width: 300px;
+}
 
+.photo-div {
+  height: 185px;
+  width: 185px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 14px;
+  border-radius: 8px;
+}
 
+.carousel-photo {
+  width: 225px;
+  border-radius: 16px;
+}
