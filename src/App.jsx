@@ -73,6 +73,12 @@ function App() {
     navigate(`/pets/${petId}/album`)
   }
 
+  const handleDeletePhoto = async (photoIdx, petId) => {
+    const updatedPet = await petService.deletePhoto(photoIdx, petId)
+    setPets(pets.map(pet => pet._id === updatedPet._id ? updatedPet : pet))
+    navigate(`/pets/${petId}/album`)
+  }
+
   const getPetById = petId => {
     return pets.find(pet => pet._id === petId)
   }
@@ -154,6 +160,7 @@ function App() {
                 user={user} 
                 getPetById={getPetById} 
                 handleAddPhoto={handleAddPhoto}
+                handleDeletePhoto={handleDeletePhoto}
               />
             </ProtectedRoute>
           } 
