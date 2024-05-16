@@ -17,3 +17,7 @@ h1 {
   margin-right: 8px;
 }
 
+.container img {
+  -webkit-filter: drop-shadow(10px 10px 10px #222222);
+  filter: drop-shadow(10px 10px 10px #222222);
+}

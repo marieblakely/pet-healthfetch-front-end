@@ -1,23 +1,23 @@
 // npm modules
 import { NavLink } from 'react-router-dom'
 // components
-import ImgCarousel from '../ImgCarousel/ImgCarousel'
+// import ImgCarousel from '../ImgCarousel/ImgCarousel'
 // import OwnerInfo from '../OwnerInfo/OwnerInfo'
 //assets
-import logo from '../../assets/branding/logo.png'
+// import logo from '../../assets/branding/logo.png'
 //css
 import styles from './PetCard.module.css'
 
-const PetCard = ({ pet, user }) => {
+const PetCard = ({ pet }) => {
   return (  
     <>
     <li>
-    {pet.photos.length ?
+    {/* {pet.photos.length ?
       <ImgCarousel photos={pet.photos} /> 
     :
       <img src={logo} alt="A cute pet" /> 
     }
-  
+   */}
     <NavLink to={`/pets/${pet._id}`}>
       <article className={styles.container}>
         <header>
