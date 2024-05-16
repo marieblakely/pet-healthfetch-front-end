@@ -75,7 +75,7 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
     <main className="album">
       <h1>Photo Album</h1>
       <p>{message}</p>
-      {pet?.owner === user.profile &&
+      {pet?.owner._id === user.profile &&
         <form className="album-form" onSubmit={handleSubmit}>
           <input 
             type="file" 

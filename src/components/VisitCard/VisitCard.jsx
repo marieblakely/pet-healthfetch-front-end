@@ -11,7 +11,7 @@ const VisitCard = ({ visit, petId, handleDeleteVisit }) => {
       <header>
       <h1>Visit Info</h1>
         <p>Reason For Visit: {visit.visitReason}</p>
-        <p>Visit Request Date: {new Date(visit.visitDate).toLocaleTimeString()}</p>
+        <p>Visit Request Date: {new Date(visit.visitDate).toLocaleString()}</p>
         <p>Is Visit Urgent?: {visit.urgent ? 'yes' : 'no' }</p>
         <span>
           <>
