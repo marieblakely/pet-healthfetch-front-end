@@ -13,6 +13,7 @@ import PetDetails from './pages/PetDetails/PetDetails'
 import NewPet from './pages/NewPet/NewPet'
 import EditPet from './pages/EditPet/EditPet'
 import EditVisit from './pages/EditVisit/EditVisit'
+import PhotoAlbum from './pages/PhotoAlbum/PhotoAlbum'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -64,6 +65,16 @@ function App() {
     const deletedPet = await petService.delete(petId)
     setPets(pets.filter(pet => pet._id !== deletedPet._id))
     navigate('/pets')
+  }
+
+  const handleAddPhoto = async (photoData, petId) => {
+    const updatedPet = await petService.addPhoto(photoData, petId)
+    setPets(pets.map(pet => pet._id === updatedPet._id ? updatedPet : pet))
+    navigate(`/pets/${petId}/album`)
+  }
+
+  const getPetById = petId => {
+    return pets.find(pet => pet._id === petId)
   }
 
   return (
@@ -133,6 +144,18 @@ function App() {
           <ProtectedRoute user={user}>
             <EditVisit />
           </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path='/pets/:petId/album' 
+          element={
+            <ProtectedRoute user={user}>
+              <PhotoAlbum 
+                user={user} 
+                getPetById={getPetById} 
+                handleAddPhoto={handleAddPhoto}
+            />
+            </ProtectedRoute>
           } 
         />
       </Routes>
