@@ -82,13 +82,13 @@ const PhotoAlbum = ({ user, getPetById, handleAddPhoto, handleDeletePhoto }) => 
           <input 
             type="file" 
             name="photo"
-            className="add-photo-input"
+            className={styles.addPhotoInput}
             onChange={handleChangePhoto}
             ref={imgInputRef}
           />
           <button
             disabled={ isSubmitted || !imgInputRef.current?.value }
-            className="add-photo-btn"
+            className={styles.addPhotoBtn}
             type='submit'
           >
             {!isSubmitted ? 'Add Photo' : '🚀 Sending...'}
