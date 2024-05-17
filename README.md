@@ -8,7 +8,7 @@
 
 
 
-## Pet HealthFetch:
+### Pet HealthFetch:
 
 ### [Pet HealthFetch](https://pet-healthfetch.netlify.app/)
 ### [GitHub Back-End Repository](https://github.com/marieblakely/pet-healthfetch.git)
@@ -46,7 +46,6 @@ Technologies Used:
 
 
 Attributes:
-* [Favicon Image](https://www.realsimple.com/thmb/xLA4latZR6rEXcB0S2fYPs7o7ug=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/travel-agent-GettyImages-1211719627-4b924cc562fe4ab4b137b6e4ea9d401d.jpg) 
 * [Freeman Google Font](https://fonts.google.com/selection/embed)
 * [Coolors.co](https://coolors.co/gradient/ebf4f5-b5c6e0)
 * [Brandcrowd.com/logo-maker](https://www.brandcrowd.com/logo-maker)

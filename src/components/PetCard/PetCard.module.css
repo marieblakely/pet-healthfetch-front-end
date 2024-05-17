@@ -13,28 +13,13 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   border: 1.5px solid rgba(255, 255, 255, .3);
-  box-shadow: 10px 10px 20px #b5c6e0, -10px -10px 20px #b5c6e0;
+  box-shadow: 10px 10px 20px #37a8c7, -10px -10px 20px #64afc3;
   background:
   linear-gradient(0deg,
   rgba(254, 254, 254, .65) 0%,
   rgba(254, 254, 254, .85) 100%);
 }
 
-/* .container img {
-  margin: 0;
-  width: 32px;
-	height: 32px;
-  opacity: .8;
-  padding: 3px;
-  border-radius: 50%;
-  background-color: blue;
-} */
-
-.container > camera-btn {
-  display: flex;
-  margin-bottom: 8px;
-  background-color: blue;
-}
 
 img, .carousel-photo {
   width: 185px;
