@@ -13,7 +13,7 @@
 ### [Pet HealthFetch](https://pet-healthfetch.netlify.app/)
 ### [GitHub Back-End Repository](https://github.com/marieblakely/pet-healthfetch.git)
 
-### [Contributors](https://github.com/dterceroparker)
+### [Contributors: Doribel Tercero Parker](https://github.com/dterceroparker?tab=repositories)
 
 ### Description:
 
