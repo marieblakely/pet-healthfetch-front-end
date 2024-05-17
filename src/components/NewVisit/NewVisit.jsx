@@ -2,8 +2,7 @@
 import { useState } from 'react'
 // css
 import styles from './NewVisit.module.css'
-// //components
-// import Icon from '../Icon/Icon'
+
 
 const NewVisit = (props) => {
   const [formData, setFormData] = useState({
@@ -63,7 +62,6 @@ const NewVisit = (props) => {
           name="urgent"
           id="urgent checkbox"
           checked={formData.urgent ? 'on' : ''}
-          // placeholder="Check Yes or No"
           onChange={handleCheckBox}
         />
       <button type="submit">Submit</button>
