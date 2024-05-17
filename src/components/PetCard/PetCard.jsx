@@ -16,11 +16,11 @@ const PetCard = ({ pet }) => {
     {pet.photos.length ?
       <ImgCarousel photos={pet.photos} /> 
     :
-      <img src={logo} alt="A cute pet" /> 
+      <img className={styles.img} src={logo} alt="A cute pet" /> 
     }
         <h1>{pet.name.toUpperCase()}</h1>
     <NavLink to={`/pets/${pet._id}/album`}>
-      <button className="camera-btn">
+      <button className={styles.cameraBtn}>
         📷
       </button>
     </NavLink>

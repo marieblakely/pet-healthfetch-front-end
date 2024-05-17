@@ -20,15 +20,15 @@ body {
   rgba(254, 254, 254, .85) 100%);
 }
 
-.container img {
+/* .container img {
   margin: 0;
   width: 32px;
 	height: 32px;
   opacity: .8;
   padding: 3px;
   border-radius: 50%;
-  border: 1px solid var(--border);
-}
+  background-color: blue;
+} */
 
 .container > camera-btn {
   display: flex;
@@ -50,3 +50,10 @@ img, .carousel-photo {
   margin-top: 8px;
 }
 
+.cameraBtn {
+  background-color:  #37a8c7;
+  border: none;
+  font-size: 24px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}

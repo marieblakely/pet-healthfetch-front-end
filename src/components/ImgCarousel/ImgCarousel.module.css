@@ -9,7 +9,7 @@
 }
 
 
-div.carousel-container > button {
+.carouselBtn {
   width: 25px;
   height: 25px;
   margin: 0px 10px;
@@ -33,7 +33,7 @@ div.carousel-container > button {
   border-radius: 8px;
 }
 
-li img, .carousel-photo {
+.carouselPhoto {
   width: 185px;
   margin-bottom: 14px;
 }
