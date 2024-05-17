@@ -21,7 +21,7 @@ const PetCard = ({ pet }) => {
         <h1>{pet.name.toUpperCase()}</h1>
     <NavLink to={`/pets/${pet._id}/album`}>
       <button className="camera-btn">
-        🖼️
+        📷
       </button>
     </NavLink>
       </article>

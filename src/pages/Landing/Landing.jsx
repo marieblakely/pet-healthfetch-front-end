@@ -9,7 +9,7 @@ const Landing = ({ user }) => {
     <main className={styles.container}>
       <h1>Hello, {user ? user.name : 'friend'}</h1>
       <section className={styles.splash}>
-          <img src={logo} alt="A cute pet" />
+          <img  src={logo} alt="A cute pet" />
         </section>
         <section className={styles.about}>
           <header>

@@ -40,3 +40,13 @@ img, .carousel-photo {
   width: 185px;
   margin-bottom: 14px;
 }
+
+.photo-card > img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.photo-card > button {
+  margin-top: 8px;
+}
+

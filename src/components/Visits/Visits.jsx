@@ -3,7 +3,7 @@ import VisitCard from "../VisitCard/VisitCard"
 
 
 const Visits = (props) => {
-  if (!props.visits.length) return <h4>No Visits</h4>
+  if (!props.visits.length) return <h4>No Visits Yet!</h4>
   return (
     <>
       {props.visits.map((visit) => (
